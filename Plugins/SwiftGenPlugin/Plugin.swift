@@ -68,14 +68,6 @@ private extension Command {
   }
 }
 
-private extension FileManager {
-  /// Re-create the given directory
-  func forceClean(directory: Path) {
-    try? removeItem(atPath: directory.string)
-    try? createDirectory(atPath: directory.string, withIntermediateDirectories: false)
-  }
-}
-
 extension Target {
   /// Try to access the underlying `moduleName` property
   /// Falls back to target's name
